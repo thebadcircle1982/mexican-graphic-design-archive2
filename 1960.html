@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1960 — Diseño Gráfico Mexicano</title>
+
+  <!-- Fonts (shared system fonts across the site) -->
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Darker+Grotesque:wght@400;500;600;700&family=BIZ+UDMincho&display=swap" rel="stylesheet" />
+
+  <!-- Main stylesheet (shared across ALL pages) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="site-frame decade-page-1960">
+
+    <!-- GLOBAL COMPONENT: Top Navigation (decade variant)
+         - Brand link (left) returns to homepage
+         - About / Contact (right) consistent UI links -->
+    <header class="top-row decade-nav-row">
+      <div class="nav-brand">
+   <a href="index.html" class="nav-brand">
+  DISEÑO GRAFICO MEXICANO
+</a>
+  </div>
+
+
+      <nav class="top-right" aria-label="Primary">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- CONTENT COMPONENT: Decade Header / Intro Module
+         Purpose: establishes decade context + short archive statement -->
+    <section class="hero-row">
+      <div class="hero-left">
+        <h1>1960's</h1>
+      </div>
+
+      <div class="hero-right">
+        <p>
+          El Archivo de Diseño Gráfico Mexicano explora la cultura visual del país a través de sus décadas.
+          Organizado en torno a piezas individuales de diseño, cada entrada documenta su contexto histórico y
+          muestra cómo el diseño se vincula con la política, la identidad y la vida pública. El proyecto busca
+          hacer visible y accesible la historia del diseño.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTENT COMPONENT: Archive Item Grid (repeatable)
+         - Uses the same grid container class as homepage
+         - Uses decade-specific modifier: decade-grid-1960
+         - Each tile is an archive object teaser (image-only)
+         - Clicking opens a FULL ENTRY page (artifact component) -->
+    <main class="decade-grid decade-grid-1960" aria-label="Archive items from the 1960s">
+      <!-- Archive Item (links to full entry) -->
+      <a class="decade" href="1960-01.html">
+        <img src="images/1960/1960_preview.jpg" alt="Poster 1960-01" />
+      </a>
+
+      <!-- Placeholders (non-clickable until you add entries) -->
+      <div class="decade" aria-hidden="true"></div>
+      <div class="decade" aria-hidden="true"></div>
+      <div class="decade" aria-hidden="true"></div>
+
+      <div class="decade" aria-hidden="true"></div>
+      <div class="decade" aria-hidden="true"></div>
+      <div class="decade" aria-hidden="true"></div>
+      <div class="decade" aria-hidden="true"></div>
+    </main>
+
+    <!-- LAYOUT / SPACER: Bottom block (visual breathing room) -->
+    <div class="bottom-block" aria-hidden="true"></div>
+
+    <!-- GLOBAL COMPONENT: Footer (shared across pages) -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        <p>Toronto<br>Ciudad de Mexico</p>
+      </div>
+
+      <div class="footer-right">
+        <p>Jose Edgar Sandoval Flores</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

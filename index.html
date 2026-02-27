@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diseño Gráfico Mexicano</title>
+
+  <!-- Fonts I used:
+       - Staatliches: big title
+       - Darker Grotesque: nav + labels
+       - BIZ UDMincho: paragraph text -->
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Darker+Grotesque:wght@400;500;600;700&family=BIZ+UDMincho&display=swap" rel="stylesheet" />
+
+  <!-- Main CSS (same file for every page) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="site-frame">
+
+    <!-- 1) GLOBAL NAV
+         This stays the same on all pages so navigation is consistent. -->
+    <header class="top-row">
+      <nav class="top-right" aria-label="Primary">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- 2) HERO SECTION
+         Left = title, Right = short description of the archive. -->
+    <section class="hero-row">
+      <div class="hero-left">
+        <h1>DISEÑO<br>GRAFICO<br>MEXICANO</h1>
+      </div>
+
+      <div class="hero-right">
+        <p>
+          El Archivo de Diseño Gráfico Mexicano explora la cultura visual del país a través de sus décadas.
+          Organizado en torno a piezas individuales de diseño, cada entrada documenta su contexto histórico y
+          muestra cómo el diseño se vincula con la política, la identidad y la vida pública. El proyecto busca
+          hacer visible y accesible la historia del diseño.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3) REPEATABLE COMPONENT: DECADE GRID
+         Each tile is a decade. Clicking takes you to that decade page. -->
+    <main class="decade-grid" aria-label="Decade index">
+      <a href="1950.html" class="decade">
+        <img src="images/1950.jpg" alt="1950s preview" />
+        <span>1950</span>
+      </a>
+
+      <a href="1960.html" class="decade">
+        <img src="images/1960/1960_preview.jpg" alt="1960s preview" />
+        <span>1960</span>
+      </a>
+
+      <a href="1970.html" class="decade">
+        <img src="images/1970.jpg" alt="1970s preview" />
+        <span>1970</span>
+      </a>
+
+      <a href="1980.html" class="decade">
+        <img src="images/1980.jpg" alt="1980s preview" />
+        <span>1980</span>
+      </a>
+
+      <a href="1990.html" class="decade">
+        <img src="images/1990.jpg" alt="1990s preview" />
+        <span>1990</span>
+      </a>
+
+      <a href="2000.html" class="decade">
+        <img src="images/2000.jpg" alt="2000s preview" />
+        <span>2000</span>
+      </a>
+
+      <a href="2010.html" class="decade">
+        <img src="images/2010.jpg" alt="2010s preview" />
+        <span>2010</span>
+      </a>
+
+      <a href="2020.html" class="decade">
+        <img src="images/2020.jpg" alt="2020s preview" />
+        <span>2020</span>
+      </a>
+    </main>
+
+    <!-- Spacer block (just visual breathing room before footer) -->
+    <div class="bottom-block" aria-hidden="true"></div>
+
+    <!-- 4) GLOBAL FOOTER
+         Location on left, author name on right. -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        <p>Toronto<br>Ciudad de Mexico</p>
+      </div>
+
+      <div class="footer-right">
+        <p>Jose Edgar Sandoval Flores</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

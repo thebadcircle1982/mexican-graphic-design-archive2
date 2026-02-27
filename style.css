@@ -1,0 +1,391 @@
+/* =========================================================
+   DISEÑO GRÁFICO MEXICANO — Website CSS
+   This file styles the homepage, decade pages, and artifact pages.
+   
+    COMPONENTS CREATED FOR THIS PROJECT
+
+   This website is built around three main repeatable components.
+   First, the Global Navigation (top nav + footer), which stays
+   consistent across all pages to create structural continuity.
+   Second, the Hero Module (title + introduction), which presents
+   the archive identity and context for each section. Third, the
+   Decade Grid component, which acts as the main navigation system
+   by organizing the archive into clickable decade tiles. On decade
+   pages, this grid is slightly modified to display portrait posters,
+   and on artifact pages the layout shifts to focus on a single
+   design piece with supporting metadata.
+   ========================================================= */
+
+
+/* =========================
+   1) RESET
+   I reset margin and padding so browsers don’t add random spacing.
+   Border-box makes sizing easier because padding stays inside width.
+   ========================= */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================
+   2) PAGE FRAME
+   I created a full-page frame with a thick black border.
+   This gives the website a contained, monumental feeling.
+   ========================= */
+body{
+  background: #E6E2DA;
+}
+
+.site-frame{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #000;
+  background: #E6E2DA;
+}
+
+
+/* =========================
+   3) TOP NAVIGATION
+   About and Contact stay locked in the top-right corner.
+   I used absolute positioning so they don’t move when resizing.
+   ========================= */
+.top-row{
+  position: relative;
+  min-height: 80px;
+  background: #e0dbd3;
+  border-bottom: 3px solid #000;
+}
+
+.top-right{
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 80px;
+  font-family: "Darker Grotesque", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.top-right a{
+  color: #000;
+  text-decoration: none;
+}
+
+.top-right a:hover{
+  text-decoration: underline;
+}
+
+
+/* =========================
+   4) HERO SECTION (TITLE + INTRO)
+   Left side = big monumental title.
+   Right side = archive description paragraph.
+   ========================= */
+.hero-row{
+  display: flex;
+  min-height: 220px;
+  border-bottom: 3px solid #000;
+}
+
+.hero-left{
+  flex: 0 0 40%;
+  padding: 40px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-left h1{
+  font-family: "Staatliches", sans-serif;
+  font-weight: 700;
+  font-size: 110px;
+  line-height: 0.85;
+  letter-spacing: 1.5px;
+}
+
+.hero-right{
+  flex: 1;
+  padding: 40px 60px 40px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-right p{
+  font-family: "BIZ UDMincho", serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.38;
+  letter-spacing: -0.015em;
+  max-width: 90ch;
+}
+
+
+/* =========================
+   5) HOMEPAGE GRID (DECADES)
+   This grid works like an index of the archive.
+   Each square links to a decade page.
+   ========================= */
+.decade-grid{
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 3px solid #000;
+}
+
+.decade{
+  position: relative;
+  flex: 1 1 25%;
+    aspect-ratio: 1 / 1;
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 12px;
+
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 52px;
+  text-decoration: none;
+  color: #000;
+
+  overflow: hidden;
+  background: #E6E2DA;
+
+  box-shadow: 6px 6px 0 #000;
+  transition: 0.2s ease;
+}
+
+/* decade number */
+.decade span{
+  position: relative;
+  z-index: 2;
+}
+
+/* preview image hidden until hover */
+.decade img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+/* simple hover effect */
+.decade:hover{
+  background: #e8e2d8;
+  box-shadow: 10px 10px 0 #000;
+  transform: translate(-2px, -2px);
+}
+
+.decade:hover img{
+  opacity: 0.85;
+}
+
+.decade:active{
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+/* remove border on every 4th tile */
+.decade:nth-child(4n){
+  border-right: none;
+}
+
+
+/* =========================
+   6) BOTTOM SPACE + FOOTER
+   Adds visual balance and closing information.
+   ========================= */
+.bottom-block{
+  flex-grow: 1;
+  background: #c4bfb7;
+}
+
+.site-footer{
+  border-top: 3px solid #000;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 23px;
+  letter-spacing: 1px;
+}
+
+.footer-left{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-left p,
+.footer-right p{
+  font-weight: 500;
+}
+
+.footer-right{
+  text-align: right;
+}
+
+
+/* =========================
+   7) DECADE PAGE BRAND (TOP LEFT)
+   On decade pages, the site name appears on the left.
+   It stacks on smaller screens.
+   ========================= */
+.decade-nav-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.decade-nav-row a.nav-brand{
+  margin-left: 20px;
+  font-family: "Staatliches", sans-serif;
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: #000;
+  text-decoration: none;
+}
+
+.decade-nav-row a.nav-brand:hover{
+  text-decoration: underline;
+}
+
+.decade-nav-row a.nav-brand span{
+  display: inline;
+}
+
+.decade-nav-row a.nav-brand span + span{
+  margin-left: 8px;
+}
+
+
+/* =========================
+   8) 1960 PAGE OVERRIDES
+   Portrait rectangles instead of squares.
+   Images always visible (archive mode).
+   ========================= */
+.decade-page-1960 .decade-grid-1960{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.decade-page-1960 .decade-grid-1960 .decade{
+  flex: 0 0 25%;
+  height: 420px; /* fixed portrait height */
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+
+  background: transparent;
+  box-shadow: none;
+
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.decade-page-1960 .decade-grid-1960 .decade img{
+  opacity: 1;
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+
+.decade-page-1960 .decade-grid-1960 .decade:hover{
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 #000;
+}
+
+
+/* =========================
+   9) ARTIFACT PAGE
+   Large poster on left, metadata on right.
+   This page focuses on one single design piece.
+   ========================= */
+.artifact-page{
+  background: #F8F4EC;
+}
+
+.artifact-hero{
+  display: flex;
+  border-top: 2px solid #000;
+  min-height: calc(100vh - 90px);
+}
+
+.artifact-figure{
+  flex: 1;
+  padding: 24px;
+  border-right: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.artifact-figure img{
+  max-width: 100%;
+  max-height: 82vh;
+}
+
+.artifact-strip{
+  width: 360px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.artifact-year{
+  font-family: "Darker Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+}
+
+
+/* =========================
+   10) RESPONSIVE RULES
+   Tablet: 2 columns
+   Mobile: 1 column
+   ========================= */
+@media (max-width: 900px){
+
+  .hero-row{ flex-direction: column; }
+
+  .decade{ flex: 1 1 50%; }
+  .decade:nth-child(2n){ border-right: none; }
+
+  .decade-page-1960 .decade-grid-1960 .decade{
+    flex: 0 0 50%;
+  }
+
+  .artifact-hero{ flex-direction: column; }
+}
+
+@media (max-width: 600px){
+
+  .decade{
+    flex: 1 1 100%;
+    border-right: none;
+  }
+
+  .decade-page-1960 .decade-grid-1960 .decade{
+    flex: 0 0 100%;
+  }
+
+  .site-footer{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-right{
+    text-align: left;
+  }
+}
