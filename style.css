@@ -340,14 +340,29 @@ body{
   display: flex;
   flex-direction: column;
   gap: 18px;
+font-family: "BIZ UDMincho", serif; /* body font */
 }
 
 .artifact-year{
-  font-family: "Darker Grotesque", sans-serif;
+   font-family: "Staatliches", sans-serif; /* display font */
+  letter-spacing: 1px;
   font-weight: 700;
   font-size: 44px;
 }
 
+.meta-row{
+  font-family: "BIZ UDMincho", serif; /* body font */
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+/* Make label + value not smash together */
+.meta-row span:first-child{
+  font-weight: 700;
+  padding-right: 14px;
+  min-width: 110px; /* keeps labels aligned */
+  display: inline-block;
+}
 
 /* =========================
    10) RESPONSIVE RULES
