@@ -35,7 +35,7 @@
    This gives the website a contained, monumental feeling.
    ========================= */
 body{
-  background: #E6E2DA;
+  /background: #E6E2DA;
 }
 
 .site-frame{
@@ -78,6 +78,10 @@ body{
 
 .top-right a:hover{
   text-decoration: underline;
+}
+
+a[href="contact.html"]{
+  display: none;
 }
 
 
@@ -147,7 +151,7 @@ body{
   justify-content: flex-end;
   padding: 12px;
 
-  font-family: "Darker Grotesque", sans-serif;
+  font-family: "Staatliches", sans-serif;
   font-size: 52px;
   text-decoration: none;
   color: #000;
@@ -293,10 +297,18 @@ body{
 }
 
 .decade-page-1960 .decade-grid-1960 .decade img{
+  position: static;      /* cancels homepage absolute positioning */
+  inset: auto;           /* cancels inset: 0 */
+  display: block;
+
   opacity: 1;
-  width: 85%;
-  height: 85%;
+  max-width: 85%;
+  max-height: 85%;
+  width: auto;
+  height: auto;
+
   object-fit: contain;
+  margin: auto;
 }
 
 .decade-page-1960 .decade-grid-1960 .decade:hover{
@@ -375,6 +387,362 @@ font-family: "BIZ UDMincho", serif; /* body font */
 }
 
 
+
+
+
+
+
+
+
+
+
+
+/* ===== ABOUT PAGE ===== */
+.about-content{
+  padding: 40px;
+  border-bottom: 3px solid #000;
+}
+
+.about-text{
+  max-width: 900px;
+}
+
+.about-text p{
+  font-family: "BIZ UDMincho", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 900px){
+  .about-content{
+    padding: 25px 20px 35px 20px;
+  }
+
+  .about-text p{
+    font-size: 16px;
+  }
+}
+
+
+/* =========================
+   8B) 1950 PAGE OVERRIDES
+   Same system as 1960 (portrait archive grid)
+   ========================= */
+
+.decade-page-1950 .decade-grid-1950{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.decade-page-1950 .decade-grid-1950 .decade{
+  flex: 0 0 25%;
+  height: 420px;
+
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+
+  background: transparent;
+  box-shadow: none;
+
+  padding: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* IMPORTANT: cancel homepage image behavior */
+.decade-page-1950 .decade-grid-1950 .decade img{
+  position: static;
+  inset: auto;
+
+  display: block;
+
+  opacity: 1;
+
+  max-width: 85%;
+  max-height: 85%;
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+  margin: auto;
+}
+
+/* hover (same as 1960) */
+.decade-page-1950 .decade-grid-1950 .decade:hover{
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 #000;
+}
+
+/* =========================
+   8B) 1970 PAGE OVERRIDES
+   Same system as 1960 (portrait archive grid)
+   ========================= */
+
+.decade-page-1970 .decade-grid-1970{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.decade-page-1970 .decade-grid-1970 .decade{
+  flex: 0 0 25%;
+  height: 420px;
+
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+
+  background: transparent;
+  box-shadow: none;
+
+  padding: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* IMPORTANT: cancel homepage image behavior */
+.decade-page-1970 .decade-grid-1970 .decade img{
+  position: static;
+  inset: auto;
+
+  display: block;
+
+  opacity: 1;
+
+  max-width: 85%;
+  max-height: 85%;
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+  margin: auto;
+}
+
+/* hover (same as 1970) */
+.decade-page-1970 .decade-grid-1970 .decade:hover{
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 #000;
+}
+
+/*  1980   */
+
+.decade-page-1980 .decade-grid-1980{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.decade-page-1980 .decade-grid-1980 .decade{
+  flex: 0 0 25%;
+  height: 420px; /* fixed portrait height */
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+
+  background: transparent;
+  box-shadow: none;
+
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.decade-page-1980 .decade-grid-1980 .decade img{
+  position: static;      /* cancels homepage absolute positioning */
+  inset: auto;           /* cancels inset: 0 */
+  display: block;
+
+  opacity: 1;
+  max-width: 85%;
+  max-height: 85%;
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+  margin: auto;
+}
+
+.decade-page-1980 .decade-grid-1980 .decade:hover{
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 #000;
+}
+
+
+/* 1990 */
+
+.decade-page-1990 .decade-grid-1990{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.decade-page-1990 .decade-grid-1990 .decade{
+  flex: 0 0 25%;
+  height: 420px; /* fixed portrait height */
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+
+  background: transparent;
+  box-shadow: none;
+
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.decade-page-1990 .decade-grid-1990 .decade img{
+  position: static;      /* cancels homepage absolute positioning */
+  inset: auto;           /* cancels inset: 0 */
+  display: block;
+
+  opacity: 1;
+  max-width: 85%;
+  max-height: 85%;
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+  margin: auto;
+}
+
+.decade-page-1990 .decade-grid-1990 .decade:hover{
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 #000;
+}
+
+/* 2000 */
+
+.decade-page-2000 .decade-grid-2000{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.decade-page-2000 .decade-grid-2000 .decade{
+  flex: 0 0 25%;
+  height: 420px; /* fixed portrait height */
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+
+  background: transparent;
+  box-shadow: none;
+
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.decade-page-2000 .decade-grid-2000 .decade img{
+  position: static;      /* cancels homepage absolute positioning */
+  inset: auto;           /* cancels inset: 0 */
+  display: block;
+
+  opacity: 1;
+  max-width: 85%;
+  max-height: 85%;
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+  margin: auto;
+}
+
+.decade-page-2000 .decade-grid-2000 .decade:hover{
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 #000;
+}
+
+/* 2010 */
+
+.decade-page-2010 .decade-grid-2010{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.decade-page-2010 .decade-grid-2010 .decade{
+  flex: 0 0 25%;
+  height: 420px; /* fixed portrait height */
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+
+  background: transparent;
+  box-shadow: none;
+
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.decade-page-2010 .decade-grid-2010 .decade img{
+  position: static;      /* cancels homepage absolute positioning */
+  inset: auto;           /* cancels inset: 0 */
+  display: block;
+
+  opacity: 1;
+  max-width: 85%;
+  max-height: 85%;
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+  margin: auto;
+}
+
+.decade-page-2010 .decade-grid-2010 .decade:hover{
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 #000;
+}
+
+
+/* 2020 */
+
+.decade-page-2020 .decade-grid-2020{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.decade-page-2020 .decade-grid-2020 .decade{
+  flex: 0 0 25%;
+  height: 420px; /* fixed portrait height */
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+
+  background: transparent;
+  box-shadow: none;
+
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.decade-page-2020 .decade-grid-2020 .decade img{
+  position: static;      /* cancels homepage absolute positioning */
+  inset: auto;           /* cancels inset: 0 */
+  display: block;
+
+  opacity: 1;
+  max-width: 85%;
+  max-height: 85%;
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+  margin: auto;
+}
+
+.decade-page-2020 .decade-grid-2020 .decade:hover{
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 #000;
+}
+
+
+
+
 /* =========================
    10) RESPONSIVE RULES
    Tablet: 2 columns
@@ -389,9 +757,40 @@ font-family: "BIZ UDMincho", serif; /* body font */
 
   .decade-page-1960 .decade-grid-1960 .decade{
     flex: 0 0 50%;
+
   }
 
-  .artifact-hero{ flex-direction: column; }
+ 
+
+  .decade-page-1950 .decade-grid-1950 .decade{
+  flex: 0 0 50%;
+}
+.decade-page-1970 .decade-grid-1970 .decade{
+  flex: 0 0 50%;
+}
+
+.decade-page-1980 .decade-grid-1980 .decade{
+  flex: 0 0 50%;
+}
+
+.decade-page-1990 .decade-grid-1990 .decade{
+  flex: 0 0 50%;
+}
+
+.decade-page-2000 .decade-grid-2000 .decade{
+  flex: 0 0 50%;
+}
+
+.decade-page-2010 .decade-grid-2010 .decade{
+  flex: 0 0 50%;
+}
+
+.decade-page-2020 .decade-grid-2020 .decade{
+  flex: 0 0 50%;
+}
+
+ .artifact-hero{ flex-direction: column; }
+
 }
 
 @media (max-width: 600px){
@@ -405,7 +804,38 @@ font-family: "BIZ UDMincho", serif; /* body font */
     flex: 0 0 100%;
   }
 
-  .site-footer{
+  
+
+  .decade-page-1950 .decade-grid-1950 .decade{
+  flex: 0 0 100%;
+}
+
+ 
+
+  .decade-page-1970 .decade-grid-1970 .decade{
+  flex: 0 0 100%;
+}
+  .decade-page-1980 .decade-grid-1980 .decade{
+  flex: 0 0 100%;
+}
+
+.decade-page-1990 .decade-grid-1990 .decade{
+  flex: 0 0 100%;
+}
+
+.decade-page-2000 .decade-grid-2000 .decade{
+  flex: 0 0 100%;
+}
+
+.decade-page-2010 .decade-grid-2010 .decade{
+  flex: 0 0 100%;
+}
+
+.decade-page-2020 .decade-grid-2020 .decade{
+  flex: 0 0 100%;
+}
+
+.site-footer{
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
@@ -414,4 +844,5 @@ font-family: "BIZ UDMincho", serif; /* body font */
   .footer-right{
     text-align: left;
   }
+
 }
