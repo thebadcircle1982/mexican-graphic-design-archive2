@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1950 — Obra 01</title>
+  <title>1950 — Obra 02</title>
 
   <!-- Shared system fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Darker+Grotesque:wght@400;500;600;700&family=BIZ+UDMincho&display=swap" rel="stylesheet" />
@@ -13,22 +13,25 @@
 </head>
 
 <body>
-  <div class="site-frame artifact-page">
+   <div class="site-frame decade-page-1950">
 
-    <!-- GLOBAL COMPONENT: Top Navigation -->
-   <header class="top-row decade-nav-row">
-  <!-- Brand (top-left) -->
-  <a href="index.html" class="nav-brand">
-  DISEÑO GRAFICO MEXICANO
-</a>
+    <!-- top nav -->
+    <!-- GLOBAL COMPONENT: Top Navigation (decade variant)
+         - Brand link (left) returns to homepage
+         - About / Contact (right) consistent UI links -->
+     <header class="top-row decade-nav-row">
+      <a href="index.html" class="nav-brand">
+        <span>DISEÑO</span>
+        <span>GRAFICO</span>
+        <span>MEXICANO</span>
+      </a>
 
-  <!-- Links (top-right) -->
-  <nav class="top-right" aria-label="Primary">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+      <nav class="top-right" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+       
+      </nav>
+    </header>
 
     <!-- CONTENT COMPONENT: Full Archive Entry (Monumental View)
          Primary information object: the DESIGN ARTIFACT (poster/print/object).
@@ -56,8 +59,11 @@
           <div class="meta-row"><span>Técnica</span><span>Offset / Serigrafía</span></div>
         </div>-->
 
-        <!-- Back navigation -->
-        <a class="artifact-back" href="1950.html">← Volver a 1950</a>
+         <!-- Back and next navigation -->
+        <div class="artifact-nav">
+  <a class="artifact-back" href="1950-01.html">← Back </a>
+  <a class="artifact-next" href="1950-03.html">Next →</a>
+</div>
       </aside>
 
     </main>

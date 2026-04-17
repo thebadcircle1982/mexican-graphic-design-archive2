@@ -13,22 +13,25 @@
 </head>
 
 <body>
-  <div class="site-frame artifact-page">
+   <div class="site-frame decade-page-1950">
 
-    <!-- GLOBAL COMPONENT: Top Navigation -->
-   <header class="top-row decade-nav-row">
-  <!-- Brand (top-left) -->
-  <a href="index.html" class="nav-brand">
-  DISEÑO GRAFICO MEXICANO
-</a>
+    <!-- top nav -->
+    <!-- GLOBAL COMPONENT: Top Navigation (decade variant)
+         - Brand link (left) returns to homepage
+         - About / Contact (right) consistent UI links -->
+     <header class="top-row decade-nav-row">
+      <a href="index.html" class="nav-brand">
+        <span>DISEÑO</span>
+        <span>GRAFICO</span>
+        <span>MEXICANO</span>
+      </a>
 
-  <!-- Links (top-right) -->
-  <nav class="top-right" aria-label="Primary">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+      <nav class="top-right" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+       
+      </nav>
+    </header>
 
     <!-- CONTENT COMPONENT: Full Archive Entry (Monumental View)
          Primary information object: the DESIGN ARTIFACT (poster/print/object).
@@ -56,8 +59,11 @@
           <div class="meta-row"><span>Técnica</span><span>Offset / Serigrafía</span></div>
         </div>-->
 
-        <!-- Back navigation -->
-        <a class="artifact-back" href="1950.html">← Volver a 1950</a>
+        <!-- Back and next navigation -->
+        <div class="artifact-nav">
+  <a class="artifact-back" href="1950.html">← Back to 1950</a>
+  <a class="artifact-next" href="1950-02.html">Next →</a>
+</div>
       </aside>
 
     </main>
